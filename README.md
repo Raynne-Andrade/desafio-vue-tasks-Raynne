@@ -47,10 +47,6 @@ vue-task/
 
 ## Como Executar
 
-git clone [repositório](https://github.com/Raynne-Andrade/vue-task.git)
-npm install 
-npm run dev
-
 ### Pré-requisitos
 
 - Node.js 18+ instalado
@@ -60,11 +56,9 @@ npm run dev
 
 ```bash
 # Clonar ou acessar o projeto
-cd vue-task
+git clone [repositório](https://github.com/Raynne-Andrade/vue-task.git)
 
 # Instalar dependências
-pnpm install
-# ou
 npm install
 ```
 
@@ -72,8 +66,6 @@ npm install
 
 ```bash
 # Iniciar servidor de desenvolvimento
-pnpm dev
-# ou
 npm run dev
 ```
 
@@ -83,13 +75,9 @@ O servidor estará disponível em `http://localhost:5173/`
 
 ```bash
 # Compilar para produção
-pnpm build
-# ou
 npm run build
 
 # Visualizar build de produção
-pnpm preview
-# ou
 npm run preview
 ```
 
