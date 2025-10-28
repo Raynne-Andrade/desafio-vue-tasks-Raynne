@@ -81,7 +81,7 @@ npm run build
 npm run preview
 ```
 
-## Uso da Aplicação
+## Guia de uso
 
 ### Adicionar uma Tarefa
 
