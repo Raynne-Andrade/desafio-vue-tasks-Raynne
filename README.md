@@ -56,7 +56,7 @@ vue-task/
 
 ```bash
 # Clonar ou acessar o projeto
-git clone https://github.com/Raynne-Andrade/vue-task.git
+git clone https://github.com/Raynne-Andrade/desafio-vue-tasks-Raynne.git
 
 # Instalar dependências
 npm install
