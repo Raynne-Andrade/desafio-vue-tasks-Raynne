@@ -29,12 +29,12 @@ const removeTodo = () => {
 
 <template>
   <section :class="[
-    'flex items-center justify-between p-4 border-b last:border-b-0 transition duration-150 ease-in-out',
+    'flex items-center justify-between p-4 border-b last:border-b-0 transition duration-150 ease-in-out gap-y-2.5 flex-wrap',
     todo.is_completed ? 'bg-green-200' : 'bg-white hover:bg-gray-50'
   ]">
     <div class="flex items-center">
       <input type="checkbox" :checked="todo.is_completed" @change="toggleCompletion" :disabled="store.isLoading"
-        class="appearance-none w-4 h-4 border-2 border-gray-300 rounded-sm bg-white checked:border-gray-500 checked:bg-gray-500" />
+        class="appearance-none w-4 h-4 border-2 border-gray-300 rounded-sm bg-white checked:border-gray-500 checked:bg-gray-500 min-w-4" />
       <div class="ml-4 text-left">
         <h3 :class="[
           'text-lg font-semibold',

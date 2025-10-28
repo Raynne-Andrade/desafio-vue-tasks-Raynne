@@ -54,13 +54,13 @@ const handleSubmit = async () => {
 
 <template>
   <section
-    class="fixed flex justify-center min-w-full h-full z-80 bg- top-0 left-0 items-center bg-[#000000e8]">
-      <form @submit.prevent="handleSubmit" class="bg-white-400 p-6 rounded-lg shadow-md mb-6 bg-white opacity- w-md">
-        <span class="text-gray-800 relative left-48 cursor-pointer" @click="$emit('close')"> X </span>
+    class="fixed flex justify-center min-w-full h-full z-80 bg- top-0 left-0 items-center bg-[#000000e8] w-2">
+      <form @submit.prevent="handleSubmit" class="bg-white-400 p-6 rounded-lg shadow-md mb-6 bg-white opacity- w-">
+        <span class="text-gray-800 relative left-30 cursor-pointer" @click="$emit('close')"> X </span>
         <h2 class="text-2xl font-bold mb-4 text-gray-800">{{ isEditing ? 'Editar Tarefa' : 'Adicionar Nova Tarefa' }}
         </h2>
 
-        <span class="mb-4">
+        <span class="mb-5">
           <label for="title" class="block text-sm font-medium text-gray-700">Título</label>
           <input id="title" v-model="title" type="text" required
             class=" text-gray-700 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -74,7 +74,7 @@ const handleSubmit = async () => {
             placeholder="Detalhes da tarefa..."></textarea>
         </span>
 
-        <span class="flex justify-end space-x-3">
+        <span class="flex justify-end space-x-3 mt-5">
           <button v-if="isEditing" @click="$emit('close')"
             class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
             Cancelar

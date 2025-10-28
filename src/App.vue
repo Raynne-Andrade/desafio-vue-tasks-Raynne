@@ -12,9 +12,10 @@ const store = useTodoStore();
   <section class="bg-gray-100 p-4 sm:p-8 flex justify-center flex-col w-full">
     <h1 class="text-4xl font-extrabold text-gray-900 mb-5">
       Gerenciador de Tarefas
-    </h1>
+    </h1> 
+    <button @click="store.toggleModal()" class="mt-5 w-3xs bg-purple-700 mb-5 text-white "> Adicionar nova tarefa </button>
     <TodoForm v-if='store.modalFormOpen' @close="store.toggleModal()" />
     <TodoList />
-    <button @click="store.toggleModal()" class="mt-5 w-3xs"> Adicionar nova tarefa </button>
+
   </section>
 </template>
