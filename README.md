@@ -1,5 +1,130 @@
-# Vue 3 + Vite
+# Gerenciador de Tarefas - Vue 3 + Pinia
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Aplicação desenvolvida em Vue3 + Pinia + Tailwind
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Funcionalidades Implementadas
+
+- **Adicionar Tarefas**: Crie novas tarefas com título e descrição opcional
+- **Editar Tarefas**: Modifique o título e descrição de tarefas existentes
+- **Remover Tarefas**: Delete tarefas com confirmação
+- **Marcar como Concluída**: Alterne o status de conclusão das tarefas
+- **Persistência Local**: Todas as tarefas são salvas automaticamente no `localStorage`
+- **Filtros de Tarefas**: Visualize todas, apenas concluídas ou apenas pendentes
+- **Feedback Visual**: Loading spinner durante operações assíncronas
+- **Responsividade**: Layout adaptável para dispositivos móveis e desktop
+- **Interface Moderna**: Estilização com Tailwind CSS
+
+## Estrutura do Projeto
+
+```
+vue-task/
+├── src/
+│   ├── components/
+│   │   ├── TodoForm.vue        # Modal de formulário para adicionar/editar tarefas
+│   │   ├── TodoItem.vue        # Componente individual de tarefa
+│   │   └── TodoList.vue        # Lista de tarefas 
+│   │   └── Filter.vue          # Filtros de concluidos, pendentes e todos
+│   │   └── ModalDeleteTodo.vue # Modal de confirmação para deletar todo
+│   │   └── loading.vue         # Loading reutilizavel em todas as páginas
+│   ├── stores/
+│   │   └── todoStore.js       # Store Pinia para gerenciamento de estado
+│   ├── App.vue                # Componente raiz
+│   └── main.js               
+│   └── main.css               # Style global
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+## Tecnologias Utilizadas
+
+| Tecnologia | Versão | Propósito |
+|------------|--------|----------|
+| **Vue.js** | 3.5.22 | Framework JavaScript progressivo |
+| **Pinia** | 3.0.3 | Gerenciamento de estado global |
+| **Tailwind CSS** | 4.1.16 | Framework CSS utilitário |
+| **Vite** | 7.1.12 | Build tool e dev server |
+
+## Como Executar
+
+git clone [repositório](https://github.com/Raynne-Andrade/vue-task.git)
+npm install 
+npm run dev
+
+### Pré-requisitos
+
+- Node.js 18+ instalado
+- npm ou pnpm
+
+### Instalação
+
+```bash
+# Clonar ou acessar o projeto
+cd vue-task
+
+# Instalar dependências
+pnpm install
+# ou
+npm install
+```
+
+### Desenvolvimento
+
+```bash
+# Iniciar servidor de desenvolvimento
+pnpm dev
+# ou
+npm run dev
+```
+
+O servidor estará disponível em `http://localhost:5173/`
+
+### Build para Produção
+
+```bash
+# Compilar para produção
+pnpm build
+# ou
+npm run build
+
+# Visualizar build de produção
+pnpm preview
+# ou
+npm run preview
+```
+
+## Uso da Aplicação
+
+### Adicionar uma Tarefa
+
+1. Preencha o campo "Título" com o nome da tarefa
+2. (Opcional) Adicione uma descrição no campo "Descrição"
+3. Clique em "Adicionar Tarefa"
+
+### Editar uma Tarefa
+
+1. Clique no ícone de lápis (✏️) na tarefa desejada
+2. Modifique o título e/ou descrição no modal que aparecerá
+3. Clique em "Salvar Edição"
+
+### Marcar como Concluída
+
+1. Clique no checkbox ao lado da tarefa
+2. A tarefa será marcada como concluída (com fundo verde e texto riscado)
+
+### Remover uma Tarefa
+
+1. Clique no ícone de lixeira (🗑️) na tarefa desejada
+2. Confirme a remoção no modal de confirmação
+
+### Filtrar Tarefas
+
+Use os botões de filtro na seção "Minhas Tarefas":
+
+- **Todas**: Exibe todas as tarefas
+- **Pendentes**: Exibe apenas tarefas não concluídas
+- **Concluídas**: Exibe apenas tarefas concluídas
+
+## Persistência de Dados
+
+As tarefas são automaticamente salvas no **localStorage** do navegador. 
